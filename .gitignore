@@ -1,0 +1,61 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+/flask-server/bin
+/flask-server/Include
+/flask-server/Lib
+/flask-server/lib64
+/flask-server/Scripts
+/flask-server/venv
+/flask-server/pyvenv.cfg
+
+/public/sixth_concepts/
+/public/seventh_concepts/
+
+# Raw FMA audio (download separately — see README)
+/public/fma_small/
+
+# Large generated ML artifacts (regenerate via the pipeline — see README).
+# These are NOT read at runtime; the app only needs the small CSVs kept in git.
+data/all_concept_cavs.csv
+data/all_concept_cavs.pkl
+data/all_concept_cav_means.pkl
+data/tracks.csv
+src/data/all_concept_cavs.csv
+src/data/all_concept_cavs.pkl
+src/data/all_concept_cav_means.pkl
+
+# Model checkpoints / cached arrays / spectrograms produced by the pipeline
+pipeline/*.h5
+pipeline/*.pth
+pipeline/*.pt
+pipeline/*.npy
+pipeline/__pycache__/
+pipeline/ACE/
+pipeline/concepts/
+pipeline/concepts_*/
+
+# Local backend env
+/flask-server/.env
+
